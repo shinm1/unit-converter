@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>مبدل واحد</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+
+  <div class="container">
+    <h1>مبدل واحد</h1>
+    <div class="tabs">
+      <button class="tab-button active" data-tab="temperature">دما</button>
+      <button class="tab-button" data-tab="length">طول</button>
+      <button class="tab-button" data-tab="weight">وزن</button>
+      <button class="tab-button" data-tab="time">زمان</button>
+      <button class="tab-button" data-tab="volume">حجم</button>
+      <button class="tab-button" data-tab="bmi">BMI</button>
+    </div>
+
+    <div class="tab-content active" id="temperature">
+      <h3>مبدل دما</h3>
+      <input type="number" id="tempInput" placeholder="مقدار را وارد کنید">
+      <select id="tempFrom">
+        <option value="celsius">سانتی‌گراد</option>
+        <option value="fahrenheit">فارنهایت</option>
+        <option value="kelvin">کلوین</option>
+      </select>
+      <select id="tempTo">
+        <option value="celsius">سانتی‌گراد</option>
+        <option value="fahrenheit">فارنهایت</option>
+        <option value="kelvin">کلوین</option>
+      </select>
+      <div class="result" id="tempResult"></div>
+    </div>
+
+    <div class="tab-content" id="length">
+      <h3>مبدل طول</h3>
+      <input type="number" id="lengthInput" placeholder="مقدار را وارد کنید">
+      <select id="lengthFrom">
+        <option value="centimeter">سانتی‌متر</option>
+        <option value="meter">متر</option>
+        <option value="kilometer">کیلومتر</option>
+        <option value="foot">فوت</option>
+        <option value="mile">مایل</option>
+      </select>
+      <select id="lengthTo">
+        <option value="centimeter">سانتی‌متر</option>
+        <option value="meter">متر</option>
+        <option value="kilometer">کیلومتر</option>
+        <option value="foot">فوت</option>
+        <option value="mile">مایل</option>
+      </select>
+      <div class="result" id="lengthResult"></div>
+    </div>
+
+    <div class="tab-content" id="weight">
+       <h3>مبدل وزن</h3>
+       <input type="number" id="weightInput" placeholder="مقدار را وارد کنید">
+       <select id="weightFrom">
+         <option value="kilogram">کیلوگرم</option>
+         <option value="gram">گرم</option>
+         <option value="pound">پوند</option>
+         <option value="ounce">اونس</option>
+       </select>
+       <select id="weightTo">
+         <option value="kilogram">کیلوگرم</option>
+         <option value="gram">گرم</option>
+         <option value="pound">پوند</option>
+         <option value="ounce">اونس</option>
+       </select>
+       <div class="result" id="weightResult"></div>
+    </div>
+
+    <div class="tab-content" id="time">
+        <h3>مبدل زمان</h3>
+        <input type="number" id="timeInput" placeholder="مقدار را وارد کنید">
+        <select id="timeFrom">
+          <option value="second">ثانیه</option>
+          <option value="minute">دقیقه</option>
+          <option value="hour">ساعت</option>
+          <option value="day">روز</option>
+        </select>
+        <select id="timeTo">
+          <option value="second">ثانیه</option>
+          <option value="minute">دقیقه</option>
+          <option value="hour">ساعت</option>
+          <option value="day">روز</option>
+        </select>
+        <div class="result" id="timeResult"></div>
+    </div>
+
+    <div class="tab-content" id="volume">
+        <h3>مبدل حجم</h3>
+        <input type="number" id="volumeInput" placeholder="مقدار را وارد کنید">
+        <select id="volumeFrom">
+        <option value="liter">لیتر</option>
+        <option value="milliliter">میلی‌لیتر</option>
+        <option value="cubic_meter">متر مکعب</option>
+        <option value="gallon">گالن (آمریکا)</option>
+        </select>
+        <select id="volumeTo">
+        <option value="liter">لیتر</option>
+        <option value="milliliter">میلی‌لیتر</option>
+        <option value="cubic_meter">متر مکعب</option>
+        <option value="gallon">گالن (آمریکا)</option>
+        </select>
+        <div class="result" id="volumeResult"></div>
+    </div>
+
+    <div class="tab-content" id="bmi">
+        <h3>محاسبه شاخص توده بدنی (BMI)</h3>
+        <input type="number" id="bmiWeight" placeholder="وزن (کیلوگرم)">
+        <input type="number" id="bmiHeight" placeholder="قد (سانتی‌متر)">
+        <button onclick="calculateBMI()">محاسبه</button>
+        <div class="result" id="bmiResult"></div>
+    </div>
+
+  </div>
+
+  <footer class="site-footer">
+    این سایت توسط شقایق محمدمرادی طراحی و پیاده‌سازی شده
+  </footer>
+
+</body>
+</html>
